@@ -3,7 +3,7 @@ package com.selin.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User {
 
     @Id
@@ -43,5 +43,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
